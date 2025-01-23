@@ -21,9 +21,9 @@ class HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   bool _isFilterOpen = false;
-  List<DateTime> _selectedMonths = [];
-  List<String> _selectedCategories = [];
-  List<String> _selectedTags = [];
+  final List<DateTime> _selectedMonths = [];
+  final List<String> _selectedCategories = [];
+  final List<String> _selectedTags = [];
 
   @override
   void initState() {
@@ -184,7 +184,6 @@ class HomeScreenState extends State<HomeScreen>
                               } else {
                                 _selectedCategories.add(categoryId);
                               }
-                              print(_selectedCategories);
                             });
                           },
                         ),
